@@ -4,9 +4,15 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
-
-    pass
-
+    for i in range(len(arr)):
+        count = 0
+        for j in range(len(arr)):
+            if arr[j] == arr[i]:
+                count += 1
+        
+        if count < 2:
+            return arr[i]
+    
 
 if __name__ == '__main__':
     # Use the main function to test your implementation
